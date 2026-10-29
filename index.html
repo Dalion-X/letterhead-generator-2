@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VP External Affairs Letterhead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f1;--pn:#fff;--tx:#1a1c1a;--mu:#626a63;--bd:#d3d9d3;--ac:#00763a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121512;--pn:#1b201c;--tx:#e6ece6;--mu:#9aa59b;--bd:#323a33;--ac:#2fa866}}
+:root[data-theme="dark"]{--bg:#121512;--pn:#1b201c;--tx:#e6ece6;--mu:#9aa59b;--bd:#323a33;--ac:#2fa866}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.app{display:grid;grid-template-columns:340px 1fr;height:100%}
+.panel{background:var(--pn);border-right:1px solid var(--bd);padding:16px;overflow:auto}
+.panel h1{font-size:17px;margin:0 0 12px}
+label{display:block;font-weight:600;font-size:12px;color:var(--mu);margin:0 0 10px}
+input,textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:7px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:14px/1.35 system-ui,sans-serif}
+textarea{resize:vertical}
+.row{display:flex;gap:6px}.row input{flex:1}
+button{margin-top:4px;padding:8px 12px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:600 13px system-ui,sans-serif;cursor:pointer}
+button.pri{background:var(--ac);border-color:var(--ac);color:#fff}
+.hint,#msg{font-size:12px;color:var(--mu);margin:4px 0 8px}
+.prev{overflow:auto;padding:18px 10px}
+.page{position:relative;width:794px;height:1123px;background:#fff;margin:0 auto 18px;box-shadow:0 2px 14px #0003;overflow:hidden;font-family:"Times New Roman","Liberation Serif",Times,serif;color:#000}
+.page>*{position:absolute}
+.hd{left:0;top:0;width:794px;height:287px;background:url(assets/header.png) center/100% 100% no-repeat}
+.tp{left:0;top:0;width:794px;height:174px;background:url(assets/top.png) center/100% 100% no-repeat}
+.bt{left:0;top:950px;width:794px;height:173px;background:url(assets/bottom.png) center/100% 100% no-repeat}
+.wm{left:151px;top:401px;width:492px;height:492px;background:url(assets/seal.jpg) center/contain no-repeat;opacity:.05}
+.c{left:83px;top:112px;width:628px;height:843px;overflow:visible;font-size:17.5px;line-height:1.25}
+.page.first .c{top:296px;height:659px}
+.c p{margin:0 0 15px;text-align:justify}
+.c .ad,.c .sl{font-family:Cinzel,"Trajan Pro",serif;font-weight:700;font-size:15px;line-height:1.3;text-align:left;margin:0 0 18px}
+.c .sl{margin:0 0 14px}
+.c .t{font-size:21px;font-weight:700;line-height:1.2;margin:4px 0 20px;text-transform:uppercase;text-align:left}
+.rf{position:relative;height:24px;white-space:nowrap;font:16px Arial,Helvetica,sans-serif;margin:0 0 28px}.rf>span{position:absolute;top:0}
+.rf .bl{display:inline-block;vertical-align:baseline;margin-left:6px;border-bottom:1.5px dotted #000;text-align:center;padding:0 2px;min-height:1em;line-height:1}
+.rf .yr .bl{min-width:100px}.rf .dt{min-width:116px;font-family:Cinzel,"Trajan Pro",serif;font-weight:700;font-size:14.5px;color:#00763a}
+.sg{position:absolute;left:300px;width:300px;text-align:center}.sg img{display:block;width:144px;height:auto;margin:0 auto 4px}
+.sg div.n{font-family:Cinzel,"Trajan Pro",serif;font-weight:700;font-size:14px;line-height:1.3;color:#00763a}
+.tools{display:flex;gap:4px;margin:4px 0 0}.tools button{margin:0;min-width:34px;padding:5px 8px;font:15px Georgia,serif}
+.ed{min-height:260px;max-height:55vh;overflow:auto;margin:4px 0 0;padding:8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,sans-serif;outline-color:var(--ac)}
+.ed p,.ed div{margin:0 0 8px}
+@media (max-width:800px){.app{display:block;height:auto}.panel{border:0}}
+@media print{@page{size:A4;margin:0}body{background:#fff}.panel{display:none}.app{display:block;height:auto}.prev{overflow:visible;padding:0}#pages{zoom:1!important}.page{margin:0;box-shadow:none;break-after:page;height:1122px}.page:last-child{break-after:auto}}
+</style></head><body>
+<div class="app"><aside class="panel">
+<h1>Letter generator</h1>
+<label>Date<input id="date"><span class="row"><input id="dp" type="date"><button id="today" type="button">Today</button></span></label>
+<label>Our Ref<input id="our"></label>
+<label>Your Ref (leave empty for a dotted line)<input id="your"></label>
+<label>Address (To)<textarea id="a1" rows="5"></textarea></label>
+<label>Through (optional)<textarea id="a2" rows="3"></textarea></label>
+<label>Salutation<input id="sal"></label>
+<label>Letter heading<textarea id="ttl" rows="2"></textarea></label>
+<label for="body">Body</label>
+<div class="tools"><button type="button" data-cmd="bold" title="Bold (Ctrl+B)"><b>B</b></button><button type="button" data-cmd="italic" title="Italic (Ctrl+I)"><i>I</i></button><button type="button" data-cmd="underline" title="Underline (Ctrl+U)"><u>U</u></button></div>
+<div id="body" class="ed" contenteditable="true" role="textbox" aria-multiline="true"></div>
+<p class="hint">Select words and press <b>B</b> (or Ctrl+B) to make them bold. Bold, italic and underline pasted from Word or Google Docs are kept. Press Enter for a new paragraph. Long letters flow onto extra pages automatically.</p>
+<button id="pdf" class="pri" type="button">Download PDF</button> <button id="prt" type="button">Print</button>
+<p id="msg"></p></aside>
+<main class="prev"><div id="pages"></div></main></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const $=id=>document.getElementById(id),KEY="vp-letterhead-draft-v1";
+const SIGN=['Emmanuel Nwaneri COL','Vice President External Affairs','Law Students Association of Nigeria','(LAWSAN)'];
+const p2=n=>String(n).padStart(2,'0');
+const dmy=d=>p2(d.getDate())+'/'+p2(d.getMonth()+1)+'/'+d.getFullYear();
+const today=()=>dmy(new Date());
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const fmt=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>');
+const IDS=['our','your','date','a1','a2','sal','ttl','body'];
+const DEF={our:"LSAN/VP-EA/.",your:"",date:today(),a1:"The Principal Partner,\nBabalakin SAN & Co\n4 River Benue Street,\nOff IBB Boulevard\nMaitama, FCT, Abuja.",a2:"",sal:"Dear Sir,",ttl:"Humble appeal for sponsorship and institutional support",body:"<p>The Law Students’ Association of Nigeria (LAWSAN), through the Office of the National Vice President, External Affairs, humbly writes to...</p><p>Type or paste your letter here. Select words and press <b>B</b> to make them bold.</p><p>Yours faithfully,</p>"};
+const body=$('body');
+const getv=k=>k==='body'?body.innerHTML:$(k).value;
+// Rich body text is held as paragraphs of runs: {t:text, b/i/u:style, sp:starts after a space}.
+// With cs (a getComputedStyle), styles are read as displayed, so bold set by class or heading styles counts too.
+function runsOf(root,cs){
+  const paras=[];let cur=[],pend=false;
+  const brk=()=>{if(cur.some(r=>r.t.trim()))paras.push(cur);cur=[];pend=false};
+  const BLOCK=/^(P|DIV|LI|H[1-6]|TR|BLOCKQUOTE|UL|OL|TABLE)$/;
+  const walk=(n,st)=>{
+    if(n.nodeType===3){
+      const parts=n.data.replace(/ /g,' ').split(/(\s+)/);
+      for(const p of parts){if(!p)continue;if(/^\s+$/.test(p)){pend=true;continue}
+        cur.push({t:p,b:st.b,i:st.i,u:st.u,sp:pend&&cur.length>0});pend=false}
+      return}
+    if(n.nodeType!==1||/^(STYLE|SCRIPT|META|TITLE|HEAD)$/.test(n.tagName))return;
+    if(n.tagName==='BR'){brk();return}
+    const s={...st};let blk;
+    if(cs){const c=cs(n);if(c.display==='none')return;
+      s.b=c.fontWeight==='bold'||c.fontWeight==='bolder'||+c.fontWeight>=600;s.i=c.fontStyle!=='normal';
+      if(/underline/.test(c.textDecorationLine||c.textDecoration))s.u=true;
+      blk=/^(block|list-item|table|table-row|flex|grid)$/.test(c.display)||BLOCK.test(n.tagName)}
+    else{const fw=n.style&&n.style.fontWeight,fs=n.style&&n.style.fontStyle,td=n.style&&(n.style.textDecoration||n.style.textDecorationLine);
+      if(/^(B|STRONG)$/.test(n.tagName))s.b=true;if(/^(I|EM)$/.test(n.tagName))s.i=true;if(n.tagName==='U')s.u=true;
+      if(fw)s.b=fw==='bold'||fw==='bolder'||+fw>=600;if(fs)s.i=fs==='italic'||fs==='oblique';if(td&&/underline/.test(td))s.u=true;
+      blk=BLOCK.test(n.tagName)}
+    if(blk)brk();
+    n.childNodes.forEach(ch=>walk(ch,s));
+    if(blk)brk()};
+  walk(root,{b:false,i:false,u:false});brk();return paras}
+// Group runs into words (break points are spaces) so long paragraphs can be split across pages.
+const wordsOf=runs=>{const w=[];runs.forEach(r=>{if(r.sp||!w.length)w.push([r]);else w[w.length-1].push(r)});return w};
+const wrap=(h,r)=>{if(r.u)h='<u>'+h+'</u>';if(r.i)h='<i>'+h+'</i>';if(r.b)h='<b>'+h+'</b>';return h};
+// Neighbouring runs with the same style are merged, so a bold or underlined phrase stays one piece (spaces included).
+const wordsHtml=ws=>{let out='',buf='',st=null;const key=r=>(r.b?'b':'')+(r.i?'i':'')+(r.u?'u':'');
+  ws.forEach((w,i)=>w.forEach((r,j)=>{const space=i>0&&j===0;
+    if(st&&key(r)===key(st))buf+=(space?' ':'')+esc(r.t);
+    else{if(st)out+=wrap(buf,st);out+=space?' ':'';buf=esc(r.t);st=r}}));
+  return st?out+wrap(buf,st):out};
+const parasHtml=ps=>ps.map(p=>'<p>'+wordsHtml(wordsOf(p))+'</p>').join('');
+// Older drafts were plain text with **bold** markers.
+const fromPlain=t=>t.split(/\n\s*\n/).map(s=>s.replace(/\s*\n\s*/g,' ').trim()).filter(Boolean).map(s=>'<p>'+fmt(s)+'</p>').join('');
+let saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+IDS.forEach(k=>{const v=saved[k]!==undefined?saved[k]:DEF[k];if(k==='body')body.innerHTML=/<[a-z]/i.test(v)?v:fromPlain(v);else $(k).value=v});
+// Plain-text pastes (e.g. a WhatsApp message copied with its Copy option) mark style with *bold*, _italic_ and ~strike~.
+// Markers only count at word edges, so emails, file_names and sums like 2*3 are left alone.
+const chatFmt=s=>{const E='(^|[\\s(\\[“"\'‘])',X='(?=$|[\\s.,;:!?)\\]”"\'’])';
+  return fmt(s).replace(new RegExp(E+'\\*(?![\\s*])([^*\\n]*?[^\\s*])\\*'+X,'g'),'$1<b>$2</b>')
+    .replace(new RegExp(E+'_(?![\\s_])([^_\\n]*?[^\\s_])_'+X,'g'),'$1<i>$2</i>')
+    .replace(new RegExp(E+'~(?![\\s~])([^~\\n]*?[^\\s~])~'+X,'g'),'$1$2')};
+// Pasted HTML is laid out in a hidden, script-free frame (with its own style rules), then read as displayed.
+const runsOfHtml=html=>new Promise(done=>{
+  const f=document.createElement('iframe');f.setAttribute('sandbox','allow-same-origin');f.setAttribute('aria-hidden','true');
+  f.style.cssText='position:fixed;left:-10000px;top:0;width:800px;height:600px;border:0;visibility:hidden';
+  let ps=null;const finish=()=>{if(ps)return;try{const w=f.contentWindow;ps=runsOf(f.contentDocument.body,n=>w.getComputedStyle(n))}catch(e){ps=runsOf(new DOMParser().parseFromString(html,'text/html').body)}f.remove();done(ps)};
+  f.onload=finish;setTimeout(finish,1500);f.srcdoc=html.replace(/<(img|link|script|iframe|object|embed|video|audio|source)\b[^>]*>/gi,'');document.body.appendChild(f)});
+body.addEventListener('paste',async e=>{
+  const cd=e.clipboardData;if(!cd)return;e.preventDefault();
+  const html=cd.getData('text/html'),text=cd.getData('text/plain');let ps;
+  const sel=getSelection(),rg=sel.rangeCount?sel.getRangeAt(0).cloneRange():null;
+  const chatMarked=/(^|\s)[*_][^\s*_][^\n]*?[^\s*_]?[*_](?=$|[\s.,;:!?])/m.test(text);
+  if(html&&!chatMarked){ps=await runsOfHtml(html);body.focus();if(rg){sel.removeAllRanges();sel.addRange(rg)}}
+  else{const blocks=/\n\s*\n/.test(text)?text.split(/\n\s*\n/).map(s=>s.replace(/\s*\n\s*/g,' ')):text.split(/\n/);
+    ps=blocks.map(s=>s.trim()).filter(Boolean).map(s=>{const d=document.createElement('div');d.innerHTML=chatFmt(s);return runsOf(d)[0]}).filter(Boolean)}
+  document.execCommand('insertHTML',false,parasHtml(ps));
+});
+document.querySelectorAll('.tools button').forEach(b=>{b.onmousedown=e=>e.preventDefault();b.onclick=()=>{body.focus();document.execCommand(b.dataset.cmd);body.dispatchEvent(new Event('input'))}});
+let c;const pages=$('pages');
+function np(){const p=document.createElement('div');const first=!pages.children.length;p.className='page'+(first?' first':'');p.innerHTML='<div class="wm"></div><div class="'+(first?'hd':'tp')+'"></div><div class="bt"></div><div class="c"></div>';pages.appendChild(p);c=p.querySelector('.c')}
+const fits=()=>{const l=c.lastElementChild;return !l||(l.offsetTop+l.offsetHeight<=c.clientHeight+1&&l.scrollWidth<=c.clientWidth+1)};
+function add(el,words){
+  c.appendChild(el);if(fits())return;c.removeChild(el);
+  if(words==null){if(c.children.length)np();c.appendChild(el);return}
+  let w=words;
+  while(w.length){
+    const t=el.cloneNode();c.appendChild(t);
+    const set=n=>{t.innerHTML=wordsHtml(w.slice(0,n))};
+    let lo=0,hi=w.length;
+    while(lo<hi){const m=Math.ceil((lo+hi)/2);set(m);if(fits())lo=m;else hi=m-1}
+    if(lo==0){c.removeChild(t);if(c.children.length){np();continue}lo=1;c.appendChild(t)}
+    set(lo);w=w.slice(lo);if(w.length)np();
+  }
+}
+// The signature sits on the right, level with the closing line ("Yours faithfully,"), as on the printed letterhead.
+// If that spot is too low, it slides up into free space on the right, or down as far as the bottom swoosh allows
+// (the swoosh curves away to the right). Only if there's no room at all does the closing move to a new page with it.
+const SWOOSH=[955,973,989,1004,1019,1032,1044,1056,1067,1077,1086,1095,1103,1111,1118,1123]; // top edge of the bottom swoosh every 50px across the page
+const swooshTop=x=>{const i=Math.max(0,Math.min(14,Math.floor(x/50))),t=Math.max(0,Math.min(1,x/50-i));return SWOOSH[i]+(SWOOSH[i+1]-SWOOSH[i])*t};
+function addSig(s){
+  const rectsOf=e=>{const rg=document.createRange();rg.selectNodeContents(e);return [...rg.getClientRects()]};
+  const anchor=()=>{const l=[...c.children].filter(e=>e!==s).pop();if(!l)return 0;return (l.classList.contains('b')&&l.offsetHeight<60)?l.offsetTop+4:l.offsetTop+l.offsetHeight+8};
+  const fits=lines=>{const p=c.parentElement.getBoundingClientRect();
+    for(const r of [s.querySelector('img').getBoundingClientRect(),...rectsOf(s.querySelector('.n'))]){
+      if(r.bottom-p.top>Math.min(swooshTop(r.left-p.left),swooshTop(r.right-p.left))-8)return false;
+      for(const t of lines)if(r.left<t.right+10&&r.right>t.left-10&&r.top<t.bottom+4&&r.bottom>t.top-4)return false}
+    return true};
+  const tryPlace=()=>{const lines=[...c.children].filter(e=>e!==s).flatMap(rectsOf),a=anchor();
+    for(let t=a;t>=Math.max(0,a-300);t-=4){s.style.top=t+'px';if(fits(lines))return true}
+    s.style.top=a+'px';return false};
+  c.appendChild(s);if(tryPlace())return;
+  c.removeChild(s);const last=c.lastElementChild;
+  if(last&&c.children.length>1&&last.classList.contains('b')&&last.offsetHeight<60){c.removeChild(last);np();c.appendChild(last)}else np();
+  c.appendChild(s);tryPlace();
+}
+function mk(cls,txt,tag){const e=document.createElement(tag||'p');e.className=cls;e.innerHTML=fmt(txt);return e}
+function build(){
+  pages.style.zoom=1;pages.innerHTML='';np();
+  const v=k=>getv(k).trim();
+  const r=document.createElement('div');r.className='rf';
+  r.innerHTML='<span class="or">Our ref '+esc(v('our'))+'</span><span class="yr">Your ref,<span class="bl">'+(esc(v('your'))||'&nbsp;')+'</span></span><span class="da">Date,<span class="bl dt">'+(esc(v('date'))||'&nbsp;')+'</span></span>';
+  add(r);
+  const [o,y,d]=r.children;const place=()=>{y.style.left=Math.max(257,o.offsetWidth+16)+'px';d.style.left=Math.max(429,y.offsetLeft+y.offsetWidth+6)+'px'};
+  let f=16;place();while(d.offsetLeft+d.offsetWidth>r.clientWidth&&f>11){f-=.5;r.style.fontSize=f+'px';place()}
+  if(v('a1'))add(mk('ad',v('a1')));
+  if(v('a2'))add(mk('ad',v('a2')));
+  if(v('sal'))add(mk('sl',v('sal')));
+  if(v('ttl'))add(mk('t',v('ttl')));
+  runsOf(body).forEach(p=>{const w=wordsOf(p),e=document.createElement('p');e.className='b';e.innerHTML=wordsHtml(w);add(e,w)});
+  const s=document.createElement('div');s.className='sg';
+  s.innerHTML='<img src="assets/sign.png" alt=""><div class="n">'+SIGN.map(esc).join('<br>')+'</div>';
+  addSig(s);fit();
+}
+function fit(){const z=Math.min(1,($('pages').parentElement.clientWidth-20)/794);pages.style.zoom=z}
+let tm;IDS.forEach(k=>$(k).addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify(Object.fromEntries(IDS.map(i=>[i,getv(i)]))))}catch(e){}build()},150)}));
+$('today').onclick=()=>{$('date').value=today();$('date').dispatchEvent(new Event('input'))};
+$('dp').onchange=()=>{const v=$('dp').value;if(!v)return;const[y,m,d]=v.split('-').map(Number);$('date').value=dmy(new Date(y,m-1,d));$('date').dispatchEvent(new Event('input'))};
+window.addEventListener('resize',fit);
+$('prt').onclick=()=>{try{window.print()}catch(e){$('msg').textContent='Printing is blocked here; use Download PDF.'}};
+$('pdf').onclick=async()=>{
+  const m=$('msg');m.textContent='Preparing PDF…';
+  try{
+    pages.style.zoom=1;const pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',compress:true});
+    // The letterhead artwork goes into the PDF as its own full-resolution images; only the letter text is captured
+    // from the page. Flattening everything into one page picture made the header's fine print blurry.
+    const k=210/794,load=src=>new Promise((ok,no)=>{const im=new Image();im.onload=()=>ok(im);im.onerror=no;im.src=src});
+    const [hd,tp,bt,wm,sg]=await Promise.all(['assets/header.png','assets/top.png','assets/bottom.png','assets/seal.jpg','assets/sign.png'].map(load));
+    // Hidden (not removed) in the text capture, so nothing around them shifts.
+    const hideArt=doc=>doc.querySelectorAll('.wm,.hd,.tp,.bt,.sg img').forEach(e=>{e.style.visibility='hidden'});
+    const els=[...document.querySelectorAll('.page')];
+    for(let i=0;i<els.length;i++){
+      const el=els[i],pr=el.getBoundingClientRect();if(i)pdf.addPage();
+      pdf.setGState(new pdf.GState({opacity:.05}));pdf.addImage(wm,'JPEG',151*k,401*k,492*k,492*k,'wm');pdf.setGState(new pdf.GState({opacity:1}));
+      if(i===0)pdf.addImage(hd,'PNG',0,0,210,287*k,'hd');else pdf.addImage(tp,'PNG',0,0,210,174*k,'tp');
+      pdf.addImage(bt,'PNG',0,950*k,210,173*k,'bt');
+      const si=el.querySelector('.sg img');if(si){const r=si.getBoundingClientRect();pdf.addImage(sg,'PNG',(r.left-pr.left)*k,(r.top-pr.top)*k,r.width*k,r.height*k,'sg')}
+      el.style.background='transparent';
+      const cv=await html2canvas(el,{scale:3,backgroundColor:null,onclone:hideArt}).finally(()=>{el.style.background=''});
+      pdf.addImage(cv,'PNG',0,0,210,297,undefined,'FAST');
+    }
+    const name=($('ttl').value||'letter').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,50)||'letter';
+    pdf.save(name+'.pdf');m.textContent=''
+  }catch(e){m.textContent='Could not create the PDF. Try Print, then Save as PDF.'}
+  fit();
+};
+// Lay out only once the letterhead font has loaded, or page breaks are measured with the fallback font.
+(document.fonts?Promise.all([document.fonts.load('700 15px Cinzel'),document.fonts.ready]).catch(()=>{}):Promise.resolve()).then(build);
+</script></body></html>
